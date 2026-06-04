@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Cornerstone Couples Fellowship
+    </title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href=
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+
+    href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- SWIPER -->
+
+    <link rel="stylesheet"
+
+    href=
+    "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src=
+    "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+
+            font-family:'Poppins',sans-serif;
+
+            color:white;
+
+            overflow-x:hidden;
+
+            min-height:100vh;
+
+            /* BACKGROUND LOGO */
+
+            background-image:
+
+            linear-gradient(
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.82)),
+
+            url("logo.png");
+
+            background-size:95%;
+
+            background-repeat:no-repeat;
+
+            background-position:center center;
+
+            background-attachment:fixed;
+
+            background-color:#111;
+        }
+
+        /* LIGHT MODE */
+
+body.light-mode{
+
+    background-image:
+
+    linear-gradient(
+    rgba(255,255,255,0.92),
+    rgba(255,255,255,0.92)),
+
+    url("logo.png");
+
+    color:#111;
+
+    background-size:95%;
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    background-attachment:fixed;
+
+    background-color:#f5f5f5;
+}
+
+/* NAVBAR */
+
+body.light-mode nav{
+
+    background:rgba(255,255,255,0.95);
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* NAV LINKS */
+
+body.light-mode nav a{
+
+    color:#111 !important;
+}
+
+/* HERO OVERLAY */
+
+body.light-mode .overlay{
+
+    background:
+    rgba(255,255,255,0.45);
+}
+
+/* HERO TITLE */
+
+body.light-mode .hero-content h2{
+
+    color:#111 !important;
+}
+
+/* HERO TEXT */
+
+body.light-mode .hero-content p{
+
+    color:#222 !important;
+}
+
+/* ABOUT DESCRIPTION */
+
+body.light-mode .about-description{
+
+    color:#111 !important;
+}
+
+/* GRATITUDE DESCRIPTION */
+
+body.light-mode .gratitude-description{
+
+    color:#111 !important;
+}
+
+/* CARDS */
+
+body.light-mode .card{
+
+    background:
+    rgba(255,255,255,0.95) !important;
+
+    color:#111 !important;
+
+    border:1px solid
+    rgba(0,0,0,0.08);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* CARD HEADINGS */
+
+body.light-mode .card h3{
+
+    color:#b8860b !important;
+}
+
+/* VERSE */
+
+body.light-mode .verse-text{
+
+    color:#b8860b !important;
+}
+
+/* INPUTS */
+
+body.light-mode input,
+body.light-mode textarea{
+
+    background:#fff;
+
+    color:#111;
+
+    border:1px solid #ddd;
+}
+
+/* BUTTONS */
+
+body.light-mode .btn{
+
+    background:#d4af37;
+
+    color:#111;
+}
+
+/* SOCIAL ICONS */
+
+body.light-mode .social-icon{
+
+    background:#d4af37;
+
+    color:#111;
+}
+
+/* FOOTER */
+
+body.light-mode footer{
+
+    background:#fff;
+
+    color:#111;
+
+    border-top:
+    1px solid #ddd;
+}
+
+/* SWIPER */
+
+body.light-mode
+.swiper-pagination-bullet-active{
+
+    background:#b8860b;
+}
+
+body.light-mode .swiper-button-next,
+body.light-mode .swiper-button-prev{
+
+    color:#b8860b;
+}
+
+            background-image:
+
+            linear-gradient(
+            rgba(255,255,255,0.88),
+            rgba(255,255,255,0.88)),
+
+            url("logo.png");
+
+            color:black;
+
+            background-size:95%;
+
+            background-repeat:no-repeat;
+
+            background-position:center center;
+
+            background-attachment:fixed;
+
+            background-color:#f5f5f5;
+        }
+
+        body.light-mode nav{
+
+            background:rgba(255,255,255,0.92);
+        }
+
+        body.light-mode nav a{
+
+            color:black;
+        }
+
+        body.light-mode .card{
+
+            background:rgba(255,255,255,0.92);
+
+            color:black;
+        }
+
+        body.light-mode .about-description{
+
+            color:black;
+        }
+
+        /* NAVBAR */
+
+        nav{
+
+            position:fixed;
+
+            top:0;
+            left:0;
+
+            width:100%;
+
+            height:85px;
+
+            padding:0 6%;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            background:rgba(0,0,0,0.45);
+
+            backdrop-filter:blur(10px);
+
+            z-index:1000;
+        }
+
+        nav h1{
+
+            color:#d4af37;
+
+            font-size:32px;
+
+            font-weight:700;
+        }
+
+        nav ul{
+
+            display:flex;
+
+            align-items:center;
+
+            list-style:none;
+
+            gap:28px;
+        }
+
+        nav ul li a{
+
+            color:white;
+
+            text-decoration:none;
+
+            font-size:17px;
+
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+
+            color:#d4af37;
+        }
+
+        /* BUTTON */
+
+        .btn{
+
+            display:inline-block;
+
+            padding:12px 28px;
+
+            background:#d4af37;
+
+            color:black;
+
+            border:none;
+
+            border-radius:30px;
+
+            cursor:pointer;
+
+            font-weight:600;
+
+            transition:0.4s;
+
+            text-decoration:none;
+        }
+
+        .btn:hover{
+
+            transform:translateY(-5px);
+        }
+
+        /* HERO SECTION */
+
+        .swiper{
+
+            width:100%;
+
+            height:100vh;
+        }
+
+        .swiper-slide{
+
+            position:relative;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            overflow:hidden;
+
+            background-size:cover;
+
+            background-position:center;
+        }
+
+        /* HERO IMAGES */
+
+        .slide1{
+
+            background-image:
+            url("bg.jpg");
+        }
+
+        .slide2{
+
+            background-image:
+            url("bg.jpg");
+        }
+
+        .slide3{
+
+            background-image:
+            url("bg.jpg");
+        }
+
+        /* OVERLAY */
+
+        .overlay{
+
+            position:absolute;
+
+            width:100%;
+            height:100%;
+
+            background:
+            rgba(0,0,0,0.65);
+
+            top:0;
+            left:0;
+
+            z-index:1;
+        }
+
+        /* HERO CONTENT */
+
+        .hero-content{
+
+            position:relative;
+
+            z-index:2;
+
+            text-align:center;
+
+            width:90%;
+
+            max-width:1000px;
+
+            padding:20px;
+        }
+
+        .hero-content h2{
+
+            font-size:4rem;
+
+            margin-bottom:20px;
+
+            line-height:1.2;
+        }
+
+        .hero-content p{
+
+            font-size:1.3rem;
+
+            line-height:1.8;
+
+            margin-bottom:30px;
+        }
+
+        /* SWIPER */
+
+        .swiper-button-next,
+        .swiper-button-prev{
+
+            color:#d4af37;
+        }
+
+        .swiper-pagination-bullet-active{
+
+            background:#d4af37;
+        }
+
+        /* SECTION */
+
+        section{
+
+            padding:60px 8%;
+        }
+
+        .section-title{
+
+            text-align:center;
+
+            margin-bottom:50px;
+        }
+
+        .section-title h2{
+
+            font-size:42px;
+
+            color:#d4af37;
+        }
+
+        /* ABOUT */
+
+        .about-description{
+
+            text-align:justify;
+
+            text-justify:inter-word;
+
+            line-height:2;
+
+            font-size:1.05rem;
+
+            max-width:1600px;
+
+            margin:auto;
+
+            padding:20px 40px;
+
+            color:white;
+        }
+
+        /* CARDS */
+
+        .cards{
+
+            display:grid;
+
+            grid-template-columns:
+            repeat(auto-fit,minmax(300px,1fr));
+
+            gap:30px;
+        }
+
+        .card{
+
+            background:
+            rgba(255,255,255,0.12);
+
+            backdrop-filter:blur(12px);
+
+            border-radius:20px;
+
+            padding:35px;
+
+            border:1px solid
+            rgba(255,255,255,0.2);
+
+            transition:0.4s;
+        }
+
+        .card:hover{
+
+            transform:translateY(-10px);
+        }
+
+        .card h3{
+
+            color:#d4af37;
+
+            margin-bottom:15px;
+        }
+
+/* EVENT DETAILS COLOR */
+
+	.event-details{
+
+	color:#d4af37;
+
+	font-weight:600;
+
+	line-height:2;
+	
+	}
+        
+/* GALLERY */
+
+        .gallerySwiper{
+
+    width:100%;
+
+    height:auto;
+
+    padding:0;
+
+    margin:0 auto 20px auto;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.gallerySwiper .swiper-slide{
+
+    height:250px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:20px;
+}
+
+.swiper-wrapper{
+
+    align-items:center;
+}
+
+.gallerySwiper{
+
+    position:relative;
+}
+
+.gallery-next,
+.gallery-prev{
+
+    color:#d4af37;
+
+    background:rgba(0,0,0,0.6);
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+}
+
+.gallery-next{
+
+    right:10px;
+}
+
+.gallery-prev{
+
+    left:10px;
+}
+
+.gallery-next:after,
+.gallery-prev:after{
+
+    font-size:18px;
+}
+
+.gallerySwiper img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+.gallerySwiper img:hover{
+
+    transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+
+#lightbox{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+}
+
+#lightbox img{
+
+    max-width:90%;
+    max-height:90%;
+
+    border-radius:15px;
+}
+
+.close-lightbox{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    font-size:40px;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* WITH GRATITUDE DESCRIPTION */
+
+        .gratitude-description{
+
+            text-align:center;
+
+            font-size:1.5rem;
+           
+            font-style:italic;
+
+            max-width:1700x;
+
+            margin:auto;
+
+            padding:20px 20px;
+
+            color:white;
+        }
+
+.verse-text{
+
+    font-style:italic;
+
+    font-size:0.9rem;
+    
+    color:#d4af37;
+
+    line-height:1.1;
+
+}
+
+.verse-text span{
+
+    font-style: normal;
+}
+
+        /* SOCIAL */
+
+        .social-icons{
+
+            text-align:center;
+        }
+
+        .social-icon{
+
+            display:inline-flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            width:65px;
+            height:65px;
+
+            margin:15px;
+
+            border-radius:50%;
+
+            background:#d4af37;
+
+            color:black;
+
+            font-size:28px;
+
+            text-decoration:none;
+
+            transition:0.4s;
+        }
+
+        .social-icon:hover{
+
+            transform:translateY(-10px)
+            scale(1.1);
+        }
+
+        /* FORM */
+
+        input,
+        textarea{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:10px;
+
+            margin-top:15px;
+
+            font-family:'Poppins',sans-serif;
+        }
+
+        /* FOOTER */
+
+        footer{
+
+            text-align:center;
+
+            padding:25px;
+
+            background:rgba(0,0,0,0.7);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px){
+
+            nav{
+
+                flex-direction:column;
+
+                height:auto;
+
+                padding:20px;
+            }
+
+            nav ul{
+
+                margin-top:15px;
+
+                flex-wrap:wrap;
+
+                justify-content:center;
+
+                gap:15px;
+            }
+
+            .hero-content h2{
+
+                font-size:2.5rem;
+            }
+
+            .hero-content p{
+
+                font-size:1rem;
+            }
+
+            .about-description{
+
+                padding:20px;
+
+                font-size:1rem;
+            }
+
+            body{
+
+                background-size:140%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>CCF</h1>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+
+            <li><a href="#gratitude">With Gratitude</a></li>
+
+            <li><a href="#prayer">Prayer Request</a></li>
+
+            <li><a href="#social">Social Media</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <button class="btn"
+        onclick="toggleMode()">
+
+        Mode
+
+        </button>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+
+            <!-- SLIDE 1 -->
+
+            <div class="swiper-slide slide1">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <h2>
+                        Cornerstone Couples Fellowship
+                    </h2>
+
+                    <p>
+                        Building Christ-Centered
+                        Marriages Through Prayer
+                    </p>
+
+                    <a href="#about"
+                    class="btn">
+
+                    Explore More
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- SLIDE 2 -->
+
+            <div class="swiper-slide slide2">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <h2>
+                        Growing Together in Faith
+                    </h2>
+
+                    <p>
+                        Strengthening Families Through
+                        God's Word & Unity
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- SLIDE 3 -->
+
+            <div class="swiper-slide slide3">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <h2>
+                        Prayer • Love • Fellowship
+                    </h2>
+
+                    <p>
+                        Building Strong Marriages
+                        on Christ
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>
+                About Us
+            </h2>
+
+        </div>
+
+        <!-- ABOUT DESCRIPTION -->
+
+        <div class="about-description">
+
+We are a Christ-centered community devoted to strengthening marriages by keeping Jesus as the true cornerstone of every relationship and home. Our heart is to create a safe, welcoming, and faith-filled space where couples can come together to grow spiritually, experience healing, receive encouragement, and build deeper, stronger connections with one another through the guidance of God’s Word.
+
+            <br><br>
+
+            Marriage is a beautiful covenant designed by God, and we believe that when husbands and wives seek Him together, their relationship is renewed with love, grace, unity, and purpose. In every season of life — whether joyful or challenging — we desire to walk alongside couples with compassion, prayer, affirmation, and unwavering support. Through fellowship and shared faith, we remind one another that no marriage is meant to journey alone.
+
+            <br><br>
+
+            Our gatherings are centered around heartfelt prayer, biblical teaching, meaningful conversations, worship, and authentic fellowship that help couples grow not only as partners, but also as disciples of Christ. We encourage families to build homes rooted in faith, communication, forgiveness, and Christlike love so they may reflect God’s presence in their everyday lives.
+
+            <br><br>
+
+            We believe God restores what is broken, strengthens what is weak, and continually grows love where hearts remain surrendered to Him. As a community, we celebrate victories together, stand together through difficulties, and encourage one another to pursue marriages that honor God and become a testimony of His faithfulness.
+
+            <br><br>
+
+            Our mission is to nurture Christ-centered marriages that flourish in faith, healing, unity, and love — raising stronger families and building a community firmly rooted in God’s grace and truth.
+
+
+        </div>
+
+        <br><br><br>
+
+        <!-- MISSION & VISION -->
+
+        <div class="cards">
+
+            <!-- MISSION -->
+
+            <div class="card">
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <p>
+
+                To cultivate Christ-centered marriages by creating a faith-filled community where couples are strengthened through prayer, encouraged through authentic fellowship, empowered by God’s Word, and equipped to build marriages anchored in grace, faith, love, and spiritual growth.
+
+                </p>
+
+            </div>
+
+            <!-- VISION -->
+
+            <div class="card">
+
+                <h3>
+                    Our Vision
+                </h3>
+
+                <p>
+
+                    To see generations of families transformed through Christ-centered marriages, raising a thriving community of couples whose homes reflect peace, healing, unity, and unwavering faith — shining with Christ’s love, restoring hope, and leaving a lasting legacy for future generations.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EVENTS -->
+
+    <section id="events">
+
+        <div class="section-title">
+
+            <h2>
+                Upcoming Events
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    Monthly Couples Prayer Meet
+                </h3>
+
+                <p> 
+
+			<span style="color:#d4af37;
+			font-weight:400;">
+                    	Date:
+			</span>
+			06 June 2026                
+               
+			<br><br>
+		
+		   	<span style="color:#d4af37;
+			font-weight:400;">
+			Time:
+			</span>
+			6:00pm
+		
+			<br><br>
+
+			<span style="color:#d4af37;
+			font-weight:400;">		
+		        Location:
+			</span>
+			Suthan Anna's Home
+
+			<br><br>
+
+			<a href= "https://maps.app.goo.gl/WBhuqDXdS28SDfij9?g_st=iw"
+
+			target="_blank"
+
+			class="btn"> 
+
+			View Location 📍 
+
+			</a>
+            
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Meeting Objectives
+                </h3>
+
+                <p>
+			1. Opening prayer
+		<br><br>
+			2. Worship time
+		<br><br>
+			3. Testimony time
+		<br><br>
+			4. Message
+		<br><br>
+			5. Closing prayer
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery">
+
+    <div class="section-title">
+
+        <h2>Gallery</h2>
+
+    </div>
+
+    <div class="swiper gallerySwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="image1.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image2.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image3.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image4.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image5.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image7.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image8.jpeg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="image10.jpeg" onclick="openImage(this.src)">
+            </div>
+
+<div class="swiper-slide">
+    <img src="image11.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image12.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image13.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image14.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image15.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image16.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image17.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image18.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image19.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image20.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image21.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image22.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image23.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image25.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image26.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image28.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image30.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image31.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image32.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image34.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image36.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image37.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image38.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image40.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image42.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image43.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image44.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image45.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image46.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image47.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image48.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image49.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image50.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image51.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image52.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image53.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image54.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image55.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image56.jpeg" onclick="openImage(this.src)">
+</div>
+
+<div class="swiper-slide">
+    <img src="image57.jpeg" onclick="openImage(this.src)">
+</div>
+
+        </div>
+
+        <div class="swiper-button-next gallery-next"></div>
+        <div class="swiper-button-prev gallery-prev"></div>
+        <div class="swiper-pagination gallery-pagination"></div>
+
+    </div>
+
+</section>
+
+    <!-- GRATITUDE -->
+
+    <section id="gratitude">
+
+        <div class="section-title">
+
+            <h2>
+                With Gratitude
+            </h2>
+
+        </div>
+
+        <div class="gratitude-description">
+
+            "Honoring those whose lives reflect Christ’s love and faithfulness."
+
+        </div>
+
+        <br><br>
+
+        <div class="cards">
+
+            <!-- UNCLE & AUNTY -->
+
+            <div class="card">
+
+                <h3>
+                    Honoring A Godly Legacy
+                </h3>
+
+<!-- IMAGE --> 
+
+<div style="
+text-align:center;
+margin:10px 0 20px 0;">
+
+<img src="Aunty uncle.png"
+
+alt="Honoring A Godly Legacy"
+
+style=" 
+width:50%; 
+max-width:560px;
+height:auto;
+object-fit:cover;">
+
+</div>
+
+                <p>
+
+This fellowship was born through God’s grace and inspired by the beautiful lives and Christ-centered example of our beloved Uncle and Aunty Mr. Victor and Mrs. Selvi Victor.
+
+            <br><br>
+
+Their marriage has been a reflection of unwavering faith, sacrificial love, humility, prayer, and steadfast commitment to God and family. Through every season, they have shown what it truly means to build a home upon Christ, our eternal Cornerstone.
+
+            <br><br>
+
+Their encouragement, wisdom, prayers, and quiet acts of love have touched many lives and became one of the foundations of this fellowship. What began as a simple desire to strengthen couples was deeply shaped by the godly legacy they continue to carry with grace and faithfulness.
+
+            <br><br>
+
+We honor them with grateful hearts and thank God for the example they continue to be — a testimony of love rooted in Christ and a blessing to generations of families.
+
+            <br><br>
+
+<p class="verse-text">
+
+    “One generation shall commend Your works to another.”
+
+    <span>— Psalm 145:4</span>
+
+</p>
+
+                </p>
+
+            </div>
+
+            <!-- SUTHAN ANNA & JEMIMA AKKA -->
+
+            <div class="card">
+
+                <h3>
+                    Faithful Servant Hearts
+                </h3>
+
+<!-- IMAGE --> 
+
+<div style="
+text-align:center;
+margin:10px 0 20px 0;">
+
+<img src="Suthan Jemmi.png"
+
+alt="Faithful Servant Hearts"
+
+style=" 
+width:50%; 
+max-width:560px;
+height:auto;
+object-fit:cover;">
+
+</div>
+
+                <p>
+
+We also lovingly honor and thank God for Mr. Suthan David and Mrs. Jemima Suthan, whose sincere love for couples and faithful servant hearts continue to strengthen this fellowship in countless ways.
+
+            <br><br>
+
+Through their prayers, encouragement, hospitality, compassion, and willingness to serve without expecting anything in return, they have created a space where couples feel welcomed, valued, encouraged, healed, and spiritually refreshed.
+
+            <br><br>
+
+Their lives beautifully reflect the heart of Christ — serving with humility, loving with sincerity, and faithfully walking alongside families through every season of life. More than organizing gatherings, they have helped nurture a community rooted in prayer, fellowship, healing, affirmation, and growing together in God’s love.
+
+            <br><br>
+
+We remain deeply grateful for their sacrifice, dedication, and unwavering support toward this ministry and the many families it continues to impact.
+
+            <br><br>
+
+<p class="verse-text">
+
+“Whoever refreshes others will be refreshed.”
+
+   <span>— Proverbs 11:25</span>
+
+</p>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PRAYER REQUEST -->
+
+    <section id="prayer">
+
+        <div class="section-title">
+
+            <h2>
+                Prayer Request
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+<form action="https://formsubmit.co/cornerstonecouplesfellowship@gmail.com" method="POST">
+    <input type="text"
+           name="name"
+           placeholder="Your Name"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Your Email"
+           required>
+
+    <textarea name="prayer"
+              rows="8"
+              placeholder="Enter Your Prayer Request"
+              required></textarea>
+
+    <!-- Disable captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="btn">
+        Submit Prayer
+    </button>
+
+</form>
+
+        </div>
+
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+
+    <section id="social">
+
+        <div class="section-title">
+
+            <h2>
+                Follow Us
+            </h2>
+
+        </div>
+
+        <div class="card social-icons">
+
+            <!-- FACEBOOK -->
+
+            <a href="#"
+            class="social-icon">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+            <!-- INSTAGRAM -->
+
+            <a href="#"
+            class="social-icon">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <!-- YOUTUBE -->
+
+            <a href="#"
+            class="social-icon">
+
+                <i class="fab fa-youtube"></i>
+
+            </a>
+
+            <!-- WHATSAPP -->
+
+            <a href=
+            "https://wa.me/919840460370"
+
+            target="_blank"
+
+            class="social-icon">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>
+                Contact Us
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <p>Email: ccf@gmail.com</p>
+
+            <br>
+
+            <p>Phone: +91 9840460370</p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Cornerstone Couples Fellowship
+        </p>
+
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        /* SWIPER */
+
+        var swiper = new Swiper(".mySwiper", {
+
+            loop:true,
+
+            speed:1200,
+
+            autoplay:{
+
+                delay:3500,
+
+                disableOnInteraction:false,
+            },
+
+            pagination:{
+
+                el:".swiper-pagination",
+
+                clickable:true,
+            },
+
+            navigation:{
+
+                nextEl:".swiper-button-next",
+
+                prevEl:".swiper-button-prev",
+            },
+        });
+
+var gallerySwiper = new Swiper(".gallerySwiper", {
+
+    slidesPerView:4,
+
+    spaceBetween:25,
+
+    loop:true,
+
+    autoplay:{
+
+        delay:2500,
+
+        disableOnInteraction:false,
+    },
+
+    navigation:{
+
+        nextEl:".gallery-next",
+
+        prevEl:".gallery-prev",
+    },
+
+    pagination:{
+
+        el:".gallery-pagination",
+
+        clickable:true,
+    },
+
+    breakpoints:{
+
+        320:{
+            slidesPerView:1,
+        },
+
+        768:{
+            slidesPerView:2,
+        },
+
+        1024:{
+            slidesPerView:3,
+        },
+
+        1400:{
+            slidesPerView:4,
+        }
+    }
+
+});
+
+/* LIGHTBOX */
+
+function openImage(src){
+
+    document.getElementById(
+    "lightbox").style.display="flex";
+
+    document.getElementById(
+    "lightbox-img").src=src;
+}
+
+function closeImage(){
+
+    document.getElementById(
+    "lightbox").style.display="none";
+}
+        /* DARK MODE */
+
+        function toggleMode(){
+
+            document.body.classList.toggle(
+            "light-mode");
+        }
+
+    </script>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+    <span
+    class="close-lightbox"
+    onclick="closeImage()">
+
+        ✕
+
+    </span>
+
+    <img id="lightbox-img">
+
+</div>
+
+<script>
+
+/* SWIPER */
+
+var swiper = new Swiper(".mySwiper", {
+
+    loop:true,
+
+    speed:1200,
+
+    autoplay:{
+
+        delay:3500,
+
+        disableOnInteraction:false,
+    },
+
+    pagination:{
+
+        el:".swiper-pagination",
+
+        clickable:true,
+    },
+
+    navigation:{
+
+        nextEl:".swiper-button-next",
+
+        prevEl:".swiper-button-prev",
+    },
+});
+
+</script>
+
+</body>
+
+</html>
